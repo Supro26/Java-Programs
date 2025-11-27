@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.*;
 public class printfile {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         try {
             FileReader fr=new FileReader("/home/bokuto/Documents/test.txt");
             int ch;
@@ -13,7 +13,7 @@ public class printfile {
                 else
                     System.out.print((char)ch);
             }
-
+            fr.close();
         } 
         catch (FileNotFoundException e) {
         // TODO Auto-generated catch block
